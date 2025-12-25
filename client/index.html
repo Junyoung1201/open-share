@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>오픈 쉐어</title>
+    <meta name="description" content="오픈소스 무제한 파일 공유 프로젝트" />
+    <meta name="title" content="오픈 쉐어" />
+    <meta name="keywords" content="open source,file,share" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="menu">
+            <button id="goto-upload-btn">업로드</button>
+            <button id="goto-download-btn">다운로드</button>
+        </div>
+
+        <div id="upload-field">
+            <input type="file" id="file-input" multiple hidden />
+
+            <label for="file-input">
+                <div id="file-select">클릭하여 업로드할 파일을 선택해주세요.</div>
+                <div id="file-selected" style="display: none;">총 <span id="fileAmount"></span>개의 파일이 선택되었습니다.<br/>파일의 크기는 <span id="fileSize"></span> 바이트입니다.</div>
+                <div id="upload-complete" style="display: none;">파일을 업로드했습니다.<br/>다운로드 키는 <span id="download-key"></span>입니다.</div>
+            </label>
+
+            <button id="upload-btn" type="button">업로드</button>
+        </div>
+
+        <div id="download-field" style="display: none;">
+            <div class="key-input">
+                <input type="number"/>
+                <input type="number" />
+                <input type="number" />
+                <input type="number" />
+                <input type="number" />
+                <input type="number" />
+            </div>
+
+            <button id="download-btn">파일 다운로드</button>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
