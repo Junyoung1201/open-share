@@ -136,8 +136,9 @@ document.querySelector("#download-btn").addEventListener('click', (e) => {
     fetch(`http://localhost:1234/download/${dlKey}`)
         .then(async (res) => {
             if (res.status !== 200) {
-                alert(res.statusText);
-
+                const text = await res.text();
+                alert(text);
+                return;
             }
 
             const blob = await res.blob();
